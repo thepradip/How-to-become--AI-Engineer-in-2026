@@ -2265,7 +2265,7 @@
     <div class="section-header fade-in">
       <div class="section-eyebrow">Interactive Tracker</div>
       <h2 class="section-title">Your 12-Week Study Plan</h2>
-      <p class="section-desc">Check off weeks as you complete them. Progress saves in your browser. Filter by track to focus.</p>
+      <p class="section-desc">Check off weeks as you complete them. Progress saves in your browser. Filter by track to focus. Two tips: pick one cloud and stick with it, and treat the linked courses as references to pull from, not full watch-throughs.</p>
     </div>
 
     <div class="sticky-bar">
@@ -2463,17 +2463,18 @@
         <div class="week-body">
           <div class="week-title">
             <span class="week-num">W10</span>
-            Local Inference
+            Local &amp; Cloud Serving
           </div>
-          <p class="week-desc">Run 4-bit and 8-bit quantized models on a 16 GB GPU (T4 or M-series). Try Qwen3-4B, Gemma 3 4B, Llama 3.1 8B for text. Generate images with SD3.5 Medium or SDXL via ComfyUI. Run CogVideoX-2B for video. Serve with vLLM and benchmark tokens/sec.</p>
+          <p class="week-desc">Run 4-bit and 8-bit quantized models locally on a 16 GB GPU (T4 or M-series) with vLLM: Qwen3-4B, Gemma 3 4B, or Llama 3.1 8B, and benchmark tokens/sec. Then deploy the same model to one managed cloud (Azure, AWS, or GCP) and compare cost and latency against local.</p>
           <div class="week-time">10–12 hrs</div>
           <div class="week-links">
             <a class="week-link" href="https://docs.ollama.com/" target="_blank" rel="noopener">Ollama</a>
             <a class="week-link" href="https://docs.vllm.ai/en/latest/" target="_blank" rel="noopener">vLLM</a>
             <a class="week-link" href="https://lmstudio.ai/" target="_blank" rel="noopener">LM Studio</a>
+            <a class="week-link" href="https://ai.azure.com/" target="_blank" rel="noopener">Azure AI Foundry</a>
           </div>
         </div>
-        <span class="week-tag ops">Inference</span>
+        <span class="week-tag ops">Serving</span>
       </article>
 
       <article class="week-card" data-track="ops">
@@ -2502,7 +2503,7 @@
             <span class="week-num">W12</span>
             Portfolio Capstone
           </div>
-          <p class="week-desc">Pick one product from the capstone list and ship it end to end: real users, auth, deploy, evals, and monitoring, plus a README, a demo, and a short pitch deck that proves it works.</p>
+          <p class="week-desc">Pick one product from the capstone list and ship it end to end: real users, auth, deploy to one managed cloud (Azure, AWS, or GCP), evals, and monitoring, plus a README, a demo, and a short pitch deck that proves it works.</p>
           <div class="week-time">15–20 hrs</div>
           <div class="week-links">
             <a class="week-link" href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a>
@@ -3498,7 +3499,7 @@
       { q: 'What is Gamma used for?', o: ['GPU monitoring', 'AI-generated presentations and documents', 'Gamma radiation simulations', 'Code compilation'], c: 1 },
       { q: 'What is "state management" in a UI app?', o: ['Managing server CPU states', 'Tracking and updating data that changes as users interact with the app', 'A CSS layout technique', 'Managing Git branch states'], c: 1 }
     ]},
-    10: { label: 'W10 · Local Inference', questions: [
+    10: { label: 'W10 · Local & Cloud Serving', questions: [
       { q: 'What is Ollama?', o: ['A cloud LLM service', 'A tool for running large language models locally on your own machine', 'A Python training library', 'A vector database'], c: 1 },
       { q: 'What is LM Studio?', o: ['A music production tool', 'A desktop app for downloading and running local LLMs with a chat UI', 'A language learning app', 'A model monitoring dashboard'], c: 1 },
       { q: 'What does quantization do to a model?', o: ['Increases parameter count', 'Duplicates weights for redundancy', 'Reduces numerical precision to shrink model size and speed up inference', 'Converts a model to run on cloud TPUs'], c: 2 },
