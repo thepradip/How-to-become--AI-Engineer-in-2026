@@ -229,6 +229,7 @@
     .agents { background: var(--red); }
     .product { background: var(--gold); }
     .ops { background: #5b4fc4; }
+    .cloud { background: #0ea5e9; }
 
     .week p {
       margin: 0;
@@ -388,13 +389,14 @@
       <button class="filter" type="button" data-filter="agents">Agents</button>
       <button class="filter" type="button" data-filter="product">Product UI</button>
       <button class="filter" type="button" data-filter="ops">LLMOps</button>
+      <button class="filter" type="button" data-filter="cloud">Cloud</button>
     </nav>
 
     <p style="font-size:13px;color:var(--muted);margin:0 0 16px;">Two tips: pick one cloud and stick with it, and treat the linked courses as references to pull from, not full watch-throughs.</p>
 
     <div class="grid">
       <section class="panel">
-        <h2>12-week timeline</h2>
+        <h2>16-week timeline</h2>
         <div class="panel-body weeks" id="weeks">
           <article class="week" data-track="foundations">
             <div class="week-head">
@@ -417,7 +419,7 @@
               <label class="week-title"><input type="checkbox" data-week="3">Week 3: LLM APIs</label>
               <span class="tag llm">LLM</span>
             </div>
-            <p>Use OpenAI, Claude, Gemini, Qwen, and Kimi APIs. Compare model cost, speed, context, and output quality.</p>
+            <p>Use OpenAI, Claude, Gemini, Qwen, and Kimi APIs. Compare cost, speed, context, and quality.</p>
             <div class="links"><a href="https://cookbook.openai.com/">OpenAI Cookbook</a><a href="https://github.com/anthropics/anthropic-cookbook">Anthropic Cookbook</a></div>
           </article>
           <article class="week" data-track="llm">
@@ -433,12 +435,20 @@
               <label class="week-title"><input type="checkbox" data-week="5">Week 5: RAG baseline</label>
               <span class="tag llm">RAG</span>
             </div>
-            <p>Parse documents, chunk content, embed text, retrieve sources, and answer with citations.</p>
+            <p>Parse documents, chunk, embed, retrieve sources, and answer with citations.</p>
             <div class="links"><a href="https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/">Advanced RAG</a><a href="https://docs.llamaindex.ai/en/stable/">LlamaIndex</a></div>
+          </article>
+          <article class="week" data-track="llm">
+            <div class="week-head">
+              <label class="week-title"><input type="checkbox" data-week="6">Week 6: Advanced RAG</label>
+              <span class="tag llm">RAG</span>
+            </div>
+            <p>Add reranking and hybrid search, build a GraphRAG index for multi-hop questions, and measure quality with an eval set.</p>
+            <div class="links"><a href="https://www.deeplearning.ai/short-courses/knowledge-graphs-rag/">Knowledge Graphs for RAG</a><a href="https://microsoft.github.io/graphrag/">GraphRAG</a></div>
           </article>
           <article class="week" data-track="agents">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="6">Week 6: LangGraph agents</label>
+              <label class="week-title"><input type="checkbox" data-week="7">Week 7: LangGraph agents</label>
               <span class="tag agents">Agents</span>
             </div>
             <p>Build a planner-search-writer-critic graph with state, retries, and a human approval checkpoint.</p>
@@ -446,51 +456,75 @@
           </article>
           <article class="week" data-track="agents">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="7">Week 7: Advanced agents</label>
+              <label class="week-title"><input type="checkbox" data-week="8">Week 8: Advanced agents</label>
               <span class="tag agents">Agents</span>
             </div>
-            <p>Compare CrewAI, AutoGen, OpenHands, OpenClaw, Hermes Agent, and OpenAI Agents SDK.</p>
-            <div class="links"><a href="https://www.crewai.com/">CrewAI</a><a href="https://github.com/All-Hands-AI/OpenHands">OpenHands</a><a href="https://openai.github.io/openai-agents-python/">Agents SDK</a></div>
+            <p>Compare CrewAI, AutoGen, OpenHands, and the OpenAI Agents SDK on a real workflow.</p>
+            <div class="links"><a href="https://www.crewai.com/">CrewAI</a><a href="https://github.com/All-Hands-AI/OpenHands">OpenHands</a></div>
           </article>
           <article class="week" data-track="agents">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="8">Week 8: Coding agents</label>
+              <label class="week-title"><input type="checkbox" data-week="9">Week 9: Coding agents</label>
               <span class="tag agents">Coding</span>
             </div>
             <p>Ship one feature with Claude Code, Codex, or Kimi Code. Review diffs, tests, and security risks yourself.</p>
-            <div class="links"><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code</a><a href="https://openai.com/codex/">Codex</a><a href="https://www.kimi.com/code/en">Kimi Code</a></div>
+            <div class="links"><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code</a><a href="https://openai.com/codex/">Codex</a></div>
           </article>
           <article class="week" data-track="product">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="9">Week 9: Vibe-coded UI</label>
+              <label class="week-title"><input type="checkbox" data-week="10">Week 10: Vibe-coded UI</label>
               <span class="tag product">Product</span>
             </div>
-            <p>Prototype in Lovable, v0, Bolt, or Replit, then refactor into a clean app with states and accessibility.</p>
-            <div class="links"><a href="https://lovable.dev/">Lovable</a><a href="https://v0.dev/">v0</a><a href="https://gamma.app/">Gamma</a></div>
+            <p>Prototype in Lovable, v0, or Bolt, then refactor into a clean app with states and accessibility.</p>
+            <div class="links"><a href="https://lovable.dev/">Lovable</a><a href="https://v0.dev/">v0</a></div>
           </article>
           <article class="week" data-track="ops">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="10">Week 10: Local and cloud serving</label>
+              <label class="week-title"><input type="checkbox" data-week="11">Week 11: Local inference</label>
               <span class="tag ops">Inference</span>
             </div>
-            <p>Run models with Ollama and LM Studio, serve with vLLM, then deploy one model to a managed cloud (Azure, AWS, or GCP) and compare cost and latency.</p>
-            <div class="links"><a href="https://docs.ollama.com/">Ollama</a><a href="https://docs.vllm.ai/en/latest/">vLLM</a><a href="https://lmstudio.ai/">LM Studio</a></div>
+            <p>Run models with Ollama and LM Studio, then serve a model with vLLM and record throughput.</p>
+            <div class="links"><a href="https://docs.ollama.com/">Ollama</a><a href="https://docs.vllm.ai/en/latest/">vLLM</a></div>
+          </article>
+          <article class="week" data-track="cloud">
+            <div class="week-head">
+              <label class="week-title"><input type="checkbox" data-week="12">Week 12: Cloud AI and deployment</label>
+              <span class="tag cloud">Cloud</span>
+            </div>
+            <p>Deploy on one managed cloud using its free tier: a managed model on Azure AI Foundry, AWS Bedrock, or Vertex AI, with managed search and cost and latency monitoring. Pick one cloud.</p>
+            <div class="links"><a href="https://ai.azure.com/">Azure AI Foundry</a><a href="https://aws.amazon.com/bedrock/">AWS Bedrock</a></div>
           </article>
           <article class="week" data-track="ops">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="11">Week 11: Evals and monitoring</label>
+              <label class="week-title"><input type="checkbox" data-week="13">Week 13: Evals and monitoring</label>
               <span class="tag ops">LLMOps</span>
             </div>
             <p>Add tracing, regression prompts, RAG metrics, cost logging, and failure examples.</p>
-            <div class="links"><a href="https://docs.smith.langchain.com/">LangSmith</a><a href="https://phoenix.arize.com/">Phoenix</a><a href="https://github.com/confident-ai/deepeval">DeepEval</a></div>
+            <div class="links"><a href="https://docs.smith.langchain.com/">LangSmith</a><a href="https://phoenix.arize.com/">Phoenix</a></div>
+          </article>
+          <article class="week" data-track="ops">
+            <div class="week-head">
+              <label class="week-title"><input type="checkbox" data-week="14">Week 14: Safety and fine-tuning</label>
+              <span class="tag ops">Safety</span>
+            </div>
+            <p>Add input and output guardrails, red-team the app, then fine-tune a small model with LoRA and compare it to few-shot.</p>
+            <div class="links"><a href="https://www.deeplearning.ai/short-courses/safe-and-reliable-ai-via-guardrails/">Guardrails</a><a href="https://github.com/unslothai/unsloth">Unsloth</a></div>
           </article>
           <article class="week" data-track="product">
             <div class="week-head">
-              <label class="week-title"><input type="checkbox" data-week="12">Week 12: Portfolio capstone</label>
-              <span class="tag product">Portfolio</span>
+              <label class="week-title"><input type="checkbox" data-week="15">Week 15: Capstone: scope and build</label>
+              <span class="tag product">Capstone</span>
             </div>
-            <p>Publish a polished AI app deployed to one managed cloud, with README, screenshots, eval results, deploy notes, and a Gamma pitch deck.</p>
-            <div class="links"><a href="https://nextjs.org/">Next.js</a><a href="https://streamlit.io/">Streamlit</a><a href="https://gamma.app/">Gamma</a></div>
+            <p>Pick one product, scope it small, and build it end to end with real data, auth, and a working UI.</p>
+            <div class="links"><a href="https://nextjs.org/">Next.js</a><a href="https://streamlit.io/">Streamlit</a></div>
+          </article>
+          <article class="week" data-track="product">
+            <div class="week-head">
+              <label class="week-title"><input type="checkbox" data-week="16">Week 16: Capstone: deploy and demo</label>
+              <span class="tag product">Capstone</span>
+            </div>
+            <p>Deploy to a managed cloud, add tracing, evals, and monitoring, then record a demo and write a README and pitch deck.</p>
+            <div class="links"><a href="https://streamlit.io/">Streamlit</a><a href="https://gamma.app/">Gamma</a></div>
           </article>
         </div>
       </section>
