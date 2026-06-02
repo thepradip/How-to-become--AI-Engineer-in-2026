@@ -45,7 +45,8 @@
       --font: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
     body {
       font-family: var(--font);
@@ -3237,11 +3238,11 @@
 
 <div class="divider"></div>
 
-<!-- ── 90-Day Path ─────────────────────────────────── -->
+<!-- ── 16-Week Overview ───────────────────────────── -->
 <section class="section">
   <div class="section-header fade-in">
-    <div class="section-eyebrow">90-Day Timeline</div>
-    <h2 class="section-title">The Practical 90-Day Path</h2>
+    <div class="section-eyebrow">16-Week Overview</div>
+    <h2 class="section-title">The 16-Week Path at a Glance</h2>
     <p class="section-desc">Six focused phases. Each ends with a concrete deliverable you can show to employers.</p>
   </div>
 
@@ -3249,60 +3250,60 @@
     <div class="timeline-item fade-in">
       <div class="timeline-dot blue">1</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 1–15</span>
-        <h3>Python, APIs &amp; Prompting</h3>
-        <p>Build Python fluency, learn API calls and Git workflow, master prompt structure for repeatable results.</p>
-        <span class="timeline-output">✦ CLI app + prompt notebook</span>
+        <span class="timeline-days">Weeks 1–2</span>
+        <h3>Foundations: Python, Git, APIs &amp; Math</h3>
+        <p>Build Python and Git fluency, learn API calls, and refresh the vectors, probability, and stats you will use all year.</p>
+        <span class="timeline-output">✦ CLI app + math refresher</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot purple">2</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 16–30</span>
-        <h3>LLM APIs, Embeddings &amp; UI</h3>
-        <p>Use multiple model APIs, understand embeddings, and build a Streamlit or Chainlit chat interface with tool calling.</p>
-        <span class="timeline-output">✦ Chat app with tools</span>
+        <span class="timeline-days">Weeks 3–4</span>
+        <h3>LLM APIs &amp; Prompt Engineering</h3>
+        <p>Use multiple model APIs, compare cost and quality, and build reusable prompt templates with schema and critique passes.</p>
+        <span class="timeline-output">✦ Chat app with tool calling</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot green">3</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 31–45</span>
-        <h3>RAG, Chunking &amp; Vector DBs</h3>
-        <p>Parse documents, embed and retrieve at scale, add a reranker, measure retrieval quality with repeatable eval cases.</p>
-        <span class="timeline-output">✦ Document Q&amp;A app</span>
+        <span class="timeline-days">Weeks 5–6</span>
+        <h3>RAG &amp; Advanced Retrieval</h3>
+        <p>Build a RAG baseline, then add reranking, hybrid search, and GraphRAG, and measure retrieval quality with a repeatable eval set.</p>
+        <span class="timeline-output">✦ Document Q&amp;A with GraphRAG + evals</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot amber">4</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 46–60</span>
-        <h3>LangGraph &amp; Multi-Agent Systems</h3>
-        <p>Build stateful agent graphs, add memory and tool use, implement human checkpoints, compare agent frameworks.</p>
-        <span class="timeline-output">✦ Research agent with checkpoints</span>
+        <span class="timeline-days">Weeks 7–9</span>
+        <h3>Agents &amp; Coding Agents</h3>
+        <p>Build stateful LangGraph agents, compare frameworks, then ship one real feature with a coding agent and review every diff.</p>
+        <span class="timeline-output">✦ Research agent + a shipped feature</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot red">5</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 61–75</span>
-        <h3>Local Inference &amp; vLLM</h3>
-        <p>Run 7B–13B models locally, quantize and benchmark, serve a model with vLLM, log throughput and memory.</p>
-        <span class="timeline-output">✦ Local model server + benchmark</span>
+        <span class="timeline-days">Weeks 10–12</span>
+        <h3>UI, Local Inference &amp; Cloud</h3>
+        <p>Prototype a UI, run and serve quantized models locally, then deploy to one managed cloud on its free tier and compare cost and latency.</p>
+        <span class="timeline-output">✦ Local server + a cloud-deployed app</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="timeline-dot pink">6</div>
       <div class="timeline-content">
-        <span class="timeline-days">Days 76–90</span>
-        <h3>UI, Deployment &amp; Portfolio</h3>
-        <p>Prototype with Lovable/v0, refactor to production code, add tracing and evals, deploy and write a polished README.</p>
-        <span class="timeline-output">✦ Capstone with demo, evals &amp; README</span>
+        <span class="timeline-days">Weeks 13–16</span>
+        <h3>LLMOps, Safety &amp; Capstone</h3>
+        <p>Add tracing, evals, and guardrails, fine-tune a small model if needed, then scope, build, deploy, and demo your capstone product.</p>
+        <span class="timeline-output">✦ Capstone: deployed, evaluated, with a demo</span>
       </div>
     </div>
   </div>
