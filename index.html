@@ -2482,7 +2482,7 @@
             <span class="week-num">W12</span>
             Portfolio Capstone
           </div>
-          <p class="week-desc">Publish a polished AI app with a detailed README, screenshots, eval results, deploy notes, and a Gamma pitch deck for interviews.</p>
+          <p class="week-desc">Pick one product from the capstone list and ship it end to end: real users, auth, deploy, evals, and monitoring, plus a README, a demo, and a short pitch deck that proves it works.</p>
           <div class="week-time">15–20 hrs</div>
           <div class="week-links">
             <a class="week-link" href="https://nextjs.org/" target="_blank" rel="noopener">Next.js</a>
@@ -2900,8 +2900,8 @@
 <section class="section" id="projects">
   <div class="section-header fade-in">
     <div class="section-eyebrow">Build Your Portfolio</div>
-    <h2 class="section-title">10 Projects to Ship</h2>
-    <p class="section-desc">Each project shows off a different skill. Finish all ten and you've got a portfolio that proves what you can do.</p>
+    <h2 class="section-title">10 Capstone Products, One Per Domain</h2>
+    <p class="section-desc">These aren't toy demos. Each one is a full-stack product in a different domain, built end to end with real data, a deploy, evals, and guardrails. Build two or three really well and your portfolio stands on its own.</p>
   </div>
 
   <a href="projects.html" class="insight-box fade-in" style="display:block;text-decoration:none;margin-bottom:32px;border-left-color:var(--green);">
@@ -2909,124 +2909,129 @@
     <span>A full build-it-yourself course: 53 real-world projects across ML, Deep Learning, NLP, GenAI, and AI Agents. Each one comes with a short description, a tech stack, documented Python, a shared chat UI, and tests. Click through to read the code and docs. Works for coders and non-coders alike.</span>
   </a>
 
+  <a href="docs/capstone-projects.html" class="insight-box fade-in" style="display:block;text-decoration:none;margin-bottom:32px;">
+    <p>📐 Read the full capstone briefs: problem, plan, tech stack &amp; 5+ features each →</p>
+    <span>Ten end-to-end products across healthcare, finance, education, HR, real estate, search, no-code agents, Azure cloud AI, insurance, and investment. Open any one for the full build spec.</span>
+  </a>
+
   <div class="projects-grid">
     <div class="project-card fade-in">
       <div class="project-num">1</div>
       <div>
-        <h3>Personal AI Search</h3>
-        <p>RAG app over your notes with citations, chunk tests, and retrieval metrics. Deploy and share.</p>
+        <h3>Clinical Decision Support & Triage Assistant</h3>
+        <p>Guideline-grounded triage and Q&amp;A with hard safety rails, a clinician review queue, audit log, and visit-note summarization, deployed in a private cloud.</p>
         <div class="project-tags">
-          <span class="project-tag">RAG</span>
-          <span class="project-tag">Chroma</span>
-          <span class="project-tag">LlamaIndex</span>
+          <span class="project-tag">Healthcare</span>
+          <span class="project-tag">RAG + Agents</span>
+          <span class="project-tag">Guardrails</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">2</div>
       <div>
-        <h3>PDF-to-Structured-Data</h3>
-        <p>Extract tables, entities, and fields from messy PDFs with validation and a Streamlit UI.</p>
+        <h3>Banking Support & Fraud-Aware Assistant</h3>
+        <p>Policy Q&amp;A plus a SQL agent over transactions, dispute intake, fraud flagging, PII masking, and a no-advice compliance guardrail with human handoff.</p>
         <div class="project-tags">
-          <span class="project-tag">Parsing</span>
-          <span class="project-tag">Validation</span>
-          <span class="project-tag">Streamlit</span>
+          <span class="project-tag">Finance</span>
+          <span class="project-tag">SQL Agent</span>
+          <span class="project-tag">Guardrails</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">3</div>
       <div>
-        <h3>RAG Chatbot with Evals</h3>
-        <p>Chat over documents with hallucination tests, retrieval quality metrics, and a regression suite.</p>
+        <h3>Adaptive Tutor & Course Builder</h3>
+        <p>A Socratic tutor that hints without leaking answers, auto-builds quizzes and lesson plans from a syllabus, grades with rubrics, and tracks each student.</p>
         <div class="project-tags">
-          <span class="project-tag">RAG</span>
-          <span class="project-tag">DeepEval</span>
-          <span class="project-tag">Ragas</span>
+          <span class="project-tag">Education</span>
+          <span class="project-tag">Tutoring Agent</span>
+          <span class="project-tag">Evals</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">4</div>
       <div>
-        <h3>LangGraph Research Agent</h3>
-        <p>Planner, search, writer, critic, and human-approval nodes. Handles multi-step research tasks.</p>
+        <h3>Recruitment & People-Ops Copilot</h3>
+        <p>Bias-aware resume-to-role matching, interview-kit generation, an employee policy bot, skills-gap analysis, PII redaction, and a recruiter dashboard.</p>
         <div class="project-tags">
-          <span class="project-tag">LangGraph</span>
-          <span class="project-tag">Agents</span>
-          <span class="project-tag">Memory</span>
+          <span class="project-tag">HR</span>
+          <span class="project-tag">Semantic Match</span>
+          <span class="project-tag">Fairness</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">5</div>
       <div>
-        <h3>Local Ollama App</h3>
-        <p>Switch between models, compare latency and quality, expose an OpenAI-compatible endpoint.</p>
+        <h3>Property Discovery & Deal Analyzer</h3>
+        <p>Natural-language and geo search over listings, vision tagging of photos, contract extraction, a deal and affordability agent, and a map dashboard with alerts.</p>
         <div class="project-tags">
-          <span class="project-tag">Ollama</span>
-          <span class="project-tag">Inference</span>
-          <span class="project-tag">Benchmarking</span>
+          <span class="project-tag">Real Estate</span>
+          <span class="project-tag">Vision + RAG</span>
+          <span class="project-tag">Maps</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">6</div>
       <div>
-        <h3>vLLM Inference Server</h3>
-        <p>Serve a quantized model with vLLM. Load-test it and publish a benchmark report with notes.</p>
+        <h3>Enterprise Knowledge Search Platform</h3>
+        <p>Hybrid keyword + vector search across Drive, Confluence, and Slack with permission-aware retrieval, GraphRAG, reranking, cited answers, and a feedback loop.</p>
         <div class="project-tags">
-          <span class="project-tag">vLLM</span>
-          <span class="project-tag">Serving</span>
-          <span class="project-tag">Performance</span>
+          <span class="project-tag">Search</span>
+          <span class="project-tag">Hybrid + GraphRAG</span>
+          <span class="project-tag">ACL</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">7</div>
       <div>
-        <h3>Coding-Agent Feature Ship</h3>
-        <p>Use Claude Code or Codex to implement a feature. Review diffs, write tests, understand all changes.</p>
+        <h3>No-Code AI Agent Builder</h3>
+        <p>A visual agent builder on Copilot Studio and Azure AI Foundry: no-code knowledge upload, a tool registry, a test sandbox, channel publishing, and governance.</p>
         <div class="project-tags">
-          <span class="project-tag">Claude Code</span>
-          <span class="project-tag">Testing</span>
-          <span class="project-tag">Code Review</span>
+          <span class="project-tag">No-Code</span>
+          <span class="project-tag">Copilot Studio</span>
+          <span class="project-tag">Azure AI Foundry</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">8</div>
       <div>
-        <h3>Vibe-Coded UI Refactor</h3>
-        <p>Generate an app in Lovable or v0, then refactor into clean Next.js with proper state and a11y.</p>
+        <h3>Azure-Native Document & Call Intelligence</h3>
+        <p>Built only on managed Azure AI services: Document Intelligence, Speech, OpenAI, and AI Search, with Content Safety guardrails and a cost and latency dashboard.</p>
         <div class="project-tags">
-          <span class="project-tag">Lovable/v0</span>
-          <span class="project-tag">Next.js</span>
-          <span class="project-tag">Accessibility</span>
+          <span class="project-tag">Azure</span>
+          <span class="project-tag">Document + Speech</span>
+          <span class="project-tag">Content Safety</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">9</div>
       <div>
-        <h3>Gamma AI Product Pitch</h3>
-        <p>Build a 10-slide deck for your AI product idea using Gamma. Include problem, solution, and roadmap.</p>
+        <h3>Insurance Policy & Claims Assistant</h3>
+        <p>Policy Q&amp;A with clause-level citations, OCR claims intake, a coverage-eligibility rules engine, fraud flagging, and an adjuster dashboard with audit and SLAs.</p>
         <div class="project-tags">
-          <span class="project-tag">Gamma</span>
-          <span class="project-tag">Storytelling</span>
-          <span class="project-tag">Product</span>
+          <span class="project-tag">Insurance</span>
+          <span class="project-tag">OCR + Rules</span>
+          <span class="project-tag">Guardrails</span>
         </div>
       </div>
     </div>
     <div class="project-card fade-in">
       <div class="project-num">10</div>
       <div>
-        <h3>Fine-Tuned Domain Model</h3>
-        <p>Fine-tune a small model with Unsloth for extraction or style. Compare it to few-shot prompting.</p>
+        <h3>Investment Research & Portfolio Assistant</h3>
+        <p>RAG over filings plus a SQL agent over holdings, risk and exposure analysis, scenario simulation, a strict no-advice guardrail, alerts, and full tracing.</p>
         <div class="project-tags">
-          <span class="project-tag">Unsloth</span>
-          <span class="project-tag">Fine-tuning</span>
-          <span class="project-tag">Evaluation</span>
+          <span class="project-tag">Investment</span>
+          <span class="project-tag">RAG + SQL</span>
+          <span class="project-tag">Guardrails</span>
         </div>
       </div>
     </div>

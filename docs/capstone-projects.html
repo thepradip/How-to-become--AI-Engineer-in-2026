@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone Project Briefs | AI Engineer 2026</title>
+  <meta name="description" content="Ten end-to-end capstone AI projects, one per domain (healthcare, finance, education, HR, real estate, search, no-code, Azure cloud AI, insurance, investment), each with a problem statement, a plan, a tech stack, and 5+ key features.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1117'/%3E%3Ccircle cx='32' cy='27' r='10' fill='none' stroke='%2338bdf8' stroke-width='2.5'/%3E%3Cpath d='M26 41h12M32 37v8' stroke='%2338bdf8' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg:#0f1117; --bg2:#161b27; --bg3:#1e2535;
+      --border:rgba(255,255,255,0.08); --border2:rgba(255,255,255,0.14);
+      --text:#e8edf5; --muted:#8b97ab; --faint:#5a6478;
+      --blue:#38bdf8; --purple:#a78bfa; --green:#34d399;
+      --grad1:linear-gradient(135deg,#38bdf8 0%,#a78bfa 50%,#34d399 100%);
+      --radius:14px; --font:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--blue);text-decoration:none;}
+    .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+    .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(15,17,23,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .topbar a.back{font-size:13px;font-weight:600;color:var(--muted);}
+    .topbar a.back:hover{color:var(--text);}
+    .topbar .brand{font-size:13px;font-weight:700;color:var(--text);}
+    header.hero{padding:64px 0 36px;text-align:center;}
+    header.hero h1{font-size:clamp(30px,6vw,50px);font-weight:900;letter-spacing:-0.02em;line-height:1.05;margin-bottom:16px;background:var(--grad1);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+    header.hero p{font-size:17px;color:var(--muted);max-width:660px;margin:0 auto;}
+    section{padding:30px 0;border-top:1px solid var(--border);}
+    .eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.2);padding:4px 12px;border-radius:99px;margin-bottom:12px;}
+    section h2{font-size:24px;font-weight:800;letter-spacing:-0.01em;margin-bottom:14px;}
+    .card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:22px;}
+    .block{font-size:14.5px;color:var(--muted);margin-bottom:12px;}
+    .block b{color:var(--text);}
+    .feat-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--green);margin:6px 0 12px;}
+    ul.feats{list-style:none;display:flex;flex-direction:column;gap:9px;}
+    ul.feats li{font-size:14px;color:var(--muted);display:flex;gap:9px;align-items:baseline;}
+    ul.feats li::before{content:"\2713";color:var(--green);font-weight:800;}
+    .note{background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--green);border-radius:var(--radius);padding:16px 20px;margin-top:8px;font-size:14px;color:var(--muted);}
+    .cta{text-align:center;padding:40px 0 56px;}
+    .btn{display:inline-block;background:var(--grad1);color:#0b1020;font-weight:800;font-size:15px;padding:13px 26px;border-radius:99px;}
+    footer{border-top:1px solid var(--border);padding:24px;text-align:center;font-size:13px;color:var(--faint);}
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <a class="back" href="../index.html#projects">&larr; Back to the roadmap</a>
+    <span class="brand">AI Engineer 2026</span>
+  </nav>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Capstone Project Briefs</h1>
+      <p>Ten end-to-end products, one per domain. Each brief gives you the problem, a plan, a tech stack, and the key features to build. These are specs to build from, not finished solutions.</p>
+    </header>
+
+    <section>
+      <div class="eyebrow">1. Healthcare</div>
+      <h2>Clinical Decision Support & Triage Assistant</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Patients and front-line clinicians can't get fast, guideline-grounded answers, triage is inconsistent between staff, and documentation eats clinician time. A generic chatbot is unsafe here.</p>
+        <p class="block"><b>Plan.</b> Scope with a clinician and a compliance owner first. Ingest approved guidelines and a formulary into a permissioned RAG index. Build a triage agent with hard safety rails, then a clinician review queue and audit trail. Run a clinician-graded eval set before any pilot, then deploy inside a private cloud tenant.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, LangGraph, Azure OpenAI or on-prem vLLM, Azure AI Search / pgvector, Pydantic guardrails, Next.js, Postgres, Langfuse or Phoenix, Docker.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Guideline-grounded Q&amp;A with clause-level citations</li>
+            <li>Symptom triage with red-flag detection and emergency escalation</li>
+            <li>Hard refusal on diagnosis and dosage, with a disclaimer on every answer</li>
+            <li>Clinician review queue plus a full audit log of every interaction</li>
+            <li>Ambient visit-note summarization into structured SOAP format</li>
+            <li>Eval harness scoring faithfulness, safety, and refusal accuracy</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">2. Finance</div>
+      <h2>Banking Support & Fraud-Aware Assistant</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Bank support lines are slow and costly, agents repeat the same policy lookups, and risky requests like disputes or suspected fraud need careful, compliant handling.</p>
+        <p class="block"><b>Plan.</b> Build RAG over policies and a SQL agent over a transactions table. Layer a no-advice guardrail and PII masking on every turn. Add fraud-pattern flagging and a clean human handoff, then a quality dashboard and weekly eval reports.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, LangGraph, Qdrant or pgvector, Postgres, an LLM via API, Presidio for PII, Next.js, LangSmith.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Account and policy Q&amp;A with citations</li>
+            <li>Natural-language to SQL over transactions with read-only guards</li>
+            <li>Transaction-dispute intake agent with status tracking</li>
+            <li>Fraud and anomaly flagging that routes to a human</li>
+            <li>PII detection and masking on every turn, with an audit log</li>
+            <li>Compliance guardrail blocking financial advice, with safe handoff</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">3. Education</div>
+      <h2>Adaptive Tutor & Course Builder</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Lectures are one-size-fits-all, teachers spend hours building materials, and students get stuck with no on-demand help that doesn't just hand them the answer.</p>
+        <p class="block"><b>Plan.</b> Build a Socratic tutoring agent that gives graduated hints with no answer leakage. Add a course-generation pipeline from a syllabus, rubric-based grading, and a teacher dashboard. Include an offline overlap check on submissions.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, LangGraph, RAG over course content, Next.js, Postgres, an open or hosted LLM, DeepEval, an offline self-overlap checker.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Adaptive tutoring with step-by-step hints that never reveal the final answer</li>
+            <li>Auto-generated lesson plans, quizzes, and flashcards from a syllabus</li>
+            <li>Rubric-based short-answer grading with written feedback</li>
+            <li>Per-student progress tracking and weak-spot detection</li>
+            <li>Submission originality and AI-overlap check</li>
+            <li>Multilingual support and a teacher analytics dashboard</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">4. HR</div>
+      <h2>Recruitment & People-Ops Copilot</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Recruiters drown in resumes, screening is inconsistent and bias-prone, and employees can't get quick answers to policy questions.</p>
+        <p class="block"><b>Plan.</b> Build bias-aware resume-to-JD matching, structured interview-kit generation, and an employee policy bot over the handbook. Add fairness checks, PII redaction, and a hiring-funnel dashboard.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, sentence-transformers and a vector DB, LangGraph, Next.js, Postgres, Presidio, an LLM via API, an eval suite for fairness and consistency.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Semantic resume-to-role matching with explainable scores</li>
+            <li>Structured, role-specific interview questions and scorecards</li>
+            <li>Employee handbook and policy assistant with citations</li>
+            <li>Bias and fairness checks plus PII redaction on candidate data</li>
+            <li>Skills-gap analysis across a candidate pool</li>
+            <li>Recruiter dashboard with funnel metrics and an audit trail</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">5. Real Estate</div>
+      <h2>Property Discovery & Deal Analyzer</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Listing search is keyword-only and dumb, buyers can't quickly judge whether a deal is good, and listing documents arrive as messy PDFs.</p>
+        <p class="block"><b>Plan.</b> Build hybrid geo plus semantic listing search, vision tagging on photos, document extraction from listing and contract PDFs, and a deal-analysis agent. Surface it in a map-based UI with a lead chatbot.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, a vector DB with geo filters, a vision-language model, OCR (Docling or Qwen-VL), Next.js with a maps SDK, Postgres / PostGIS, an LLM via API.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Natural-language property search with location and semantic filters</li>
+            <li>Vision tagging of listing photos for condition and features</li>
+            <li>Extraction of terms and fees from listing and contract PDFs</li>
+            <li>Comparative market analysis and an affordability or mortgage agent</li>
+            <li>Lead-qualification chatbot with scheduling</li>
+            <li>Map dashboard with saved searches and alerts</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">6. Search</div>
+      <h2>Enterprise Knowledge Search Platform</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Company knowledge is scattered across Drive, Confluence, Slack, and tickets, internal search is poor, and answers must respect who is allowed to see what.</p>
+        <p class="block"><b>Plan.</b> Build connectors that sync sources, hybrid retrieval with reranking, permission-aware (ACL) filtering, and a GraphRAG layer for entity questions. Add a feedback loop and continuous evals.</p>
+        <p class="block"><b>Tech stack.</b> Python, a hybrid backend (OpenSearch or Elasticsearch plus vectors) or Azure AI Search, a reranker, GraphRAG, Next.js, an LLM via API, Ragas or Phoenix.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Multi-source connectors with incremental sync</li>
+            <li>Hybrid keyword and vector retrieval with reranking</li>
+            <li>Permission-aware retrieval that respects source ACLs</li>
+            <li>GraphRAG for who, what, and when entity questions</li>
+            <li>Cited answers with a thumbs up or down feedback loop</li>
+            <li>Search analytics and an automated retrieval-quality eval</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">7. No-Code</div>
+      <h2>No-Code AI Agent Builder</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Non-developers in ops, support, and sales need to build and govern their own agents without writing code, and IT needs governance over what gets shipped.</p>
+        <p class="block"><b>Plan.</b> Build on Microsoft Copilot Studio and Azure AI Foundry Agent Service, adding a thin layer for a connector registry, governance, and evals. Let users upload knowledge, wire tools visually, test in a sandbox, and publish to Teams or web.</p>
+        <p class="block"><b>Tech stack.</b> Microsoft Copilot Studio, Azure AI Foundry (Agent Service and model catalog), Azure AI Search for knowledge, Azure Functions for custom tools, Entra ID for RBAC, Foundry evaluations and Application Insights.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Visual, no-code agent and flow builder</li>
+            <li>Knowledge upload with automatic RAG indexing</li>
+            <li>Tool and connector registry for APIs, databases, and the web</li>
+            <li>A test-and-preview sandbox before publishing</li>
+            <li>One-click publish to Teams, web chat, or other channels</li>
+            <li>Role-based governance plus built-in evaluations and tracing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">8. Cloud AI (Azure)</div>
+      <h2>Azure-Native Document & Call Intelligence</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> A regulated org wants AI built only on managed Azure services, not self-hosted models, turning forms and recorded calls into structured, searchable, compliant data.</p>
+        <p class="block"><b>Plan.</b> Use Azure AI Document Intelligence for forms, Azure AI Speech for call transcription and sentiment, Azure OpenAI for reasoning and summaries, Azure AI Search as the index, and Content Safety as the guardrail. Deploy on Container Apps with cost and latency monitoring.</p>
+        <p class="block"><b>Tech stack.</b> Azure AI Document Intelligence, Azure AI Speech, Azure OpenAI, Azure AI Search, Azure AI Content Safety, Azure Container Apps, Application Insights, Foundry evaluations.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Form and invoice extraction into structured fields</li>
+            <li>Call transcription with speaker diarization and sentiment</li>
+            <li>Summaries and action items grounded in the source</li>
+            <li>A searchable index across both documents and calls</li>
+            <li>Content Safety guardrails and PII handling</li>
+            <li>A cost, latency, and quality dashboard with eval gates</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">9. Insurance</div>
+      <h2>Insurance Policy & Claims Assistant</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Policyholders can't understand their coverage, claims intake is manual and slow, and answers must cite the exact policy clause to be trustworthy.</p>
+        <p class="block"><b>Plan.</b> Build RAG over policy documents with clause-level citations, an OCR and extraction pipeline for claims, a coverage-checker agent against a rules engine, and anomaly flagging. Add a compliance guardrail and an adjuster dashboard.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, OCR (Docling), a vector DB, a rules engine, LangGraph, Pydantic validation, Next.js, Postgres, an eval and tracing stack.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>Policy Q&amp;A with exact clause citations</li>
+            <li>Claims intake via OCR into validated structured fields</li>
+            <li>Coverage-eligibility checker against a rules engine</li>
+            <li>Fraud and anomaly flagging on claims</li>
+            <li>Compliance guardrail with no advice, plus adjuster handoff</li>
+            <li>Adjuster dashboard with status, audit log, and SLA tracking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">10. Investment</div>
+      <h2>Investment Research & Portfolio Assistant</h2>
+      <div class="card">
+        <p class="block"><b>Problem.</b> Analysts spend hours reading filings and reconciling portfolio data, and any tool here must be strictly educational with no advice.</p>
+        <p class="block"><b>Plan.</b> Build RAG over filings and research plus NL-to-SQL over holdings, a risk and exposure analyzer, and a scenario-simulation agent. Enforce a hard no-advice disclaimer and add alerting and observability. Frame it clearly as research, not advice.</p>
+        <p class="block"><b>Tech stack.</b> Python + FastAPI, RAG over filings, a SQL agent over a holdings DB, a market-data API, LangGraph, Next.js, Postgres, LangSmith or Phoenix.</p>
+        <div class="feat-title">Key features</div>
+        <ul class="feats">
+            <li>RAG over filings and research with citations</li>
+            <li>Natural-language to SQL over portfolio holdings</li>
+            <li>Risk and exposure analysis for concentration, sector, and drawdown</li>
+            <li>Scenario-simulation agent for what-if questions</li>
+            <li>Hard no-advice guardrail with a disclaimer on every output</li>
+            <li>Threshold alerting and a full tracing and eval dashboard</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="note">Every brief ships full-stack with a real UI, realistic data, deploy notes, an eval suite, guardrails, and basic observability. Each one also maps onto a forward-deployed client scenario, so the build doubles as job proof.</div>
+    </section>
+
+    <div class="cta">
+      <a class="btn" href="../index.html#study-plan">Start the 12-week plan &rarr;</a>
+    </div>
+  </div>
+  <footer>Part of <a href="../index.html">How to Become an AI Engineer in 2026</a></footer>
+</body>
+</html>
